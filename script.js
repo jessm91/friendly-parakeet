@@ -34,7 +34,7 @@ while(confirmLength <= 7 || confirmLength >= 129) {
     }
 
 // Repeat how many characters the user has chosen
-alert (`Your password will have ${confirmLength} chracters.`);
+alert (`Your password will have ${confirmLength} characters.`);
 
 // Password parameters
 var confirmLowerCase = confirm ("Click OK if you would like to include lowercase letters.");
