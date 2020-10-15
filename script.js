@@ -39,7 +39,14 @@ var confirmLowerCase = confirm ("Click OK if you would like to include lowercase
 var confirmUpperCase = confirm ("Click OK if you would like to include uppercase letters.");
 var confirmNumericCharacter = confirm ("Click OK if you would like to include numbers.");
 var confirmSpecialCharacter = confirm ("Click OK if you would like to include special characters.");
-
+    // Loop if answer is outside the parameters
+    while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false) {
+      alert("You must choose at least one parameter");
+      var confirmLowerCase = confirm ("Click OK if you would like to include lowercase letters.");
+      var confirmUpperCase = confirm ("Click OK if you would like to include uppercase letters.");
+      var confirmNumericCharacter = confirm ("Click OK if you would like to include numbers.");
+      var confirmSpecialCharacter = confirm ("Click OK if you would like to include special characters.");
+    }
 }
 
 // Get references to the #generate element
