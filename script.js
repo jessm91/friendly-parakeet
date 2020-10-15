@@ -4,12 +4,14 @@
 
 document.querySelector("#generate").addEventListener("click", writePassword);
 
-// Arrays for password conditions
+// Return variables
 
-var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+var lower = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+var upper = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+var number = String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+
+const symbols = "!@#$%^&*()";
+var symbol = symbols[Math.floor(Math.random() * symbols.length)];
 
 // Variable confirm
 
@@ -28,7 +30,7 @@ function generatePassword() {
 
 while(confirmLength <= 7 || confirmLength >= 129) {
     alert("Password length must be between 8-128 characters. Please try again.");
-    var confirmLength = (prompt("How many chracters would you like to use for your password?"));
+    var confirmLength = (prompt("How many characters would you like to use for your password?"));
     }
 
 // Repeat how many characters the user has chosen
